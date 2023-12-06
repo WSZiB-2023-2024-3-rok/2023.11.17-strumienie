@@ -26,21 +26,11 @@ public class App {
 
         System.out.println(cars);
 
-        Collections.sort(cars, new Comparator<Car>() {
-            @Override
-            public int compare(Car o1, Car o2) {
-                return o1.getBrand().compareTo(o2.getBrand());
-            }
-        });
+        Collections.sort(cars, (c1, c2) -> c1.getBrand().compareTo(c2.getBrand()));
 
         System.out.println(cars);
 
-        Collections.sort(cars, new Comparator<Car>() {
-            @Override
-            public int compare(Car o1, Car o2) {
-                return o2.getPrice() - o1.getPrice();
-            }
-        });
+        Collections.sort(cars, (c1, c2) -> c1.getPrice() - c2.getPrice());
 
         System.out.println(cars);
 
